@@ -42,7 +42,7 @@ public class EmployeeService {
 
     public RespPageBean getEmployeeByPage(Integer page, Integer size, Employee employee, Date[] beginDateScope) {
         if (page != null && size != null) {
-            page = (page - 1) * size;
+                page = (page - 1) * size;
         }
         List<Employee> data = employeeMapper.getEmployeeByPage(page, size, employee, beginDateScope);
         Long total = employeeMapper.getTotal(employee, beginDateScope);

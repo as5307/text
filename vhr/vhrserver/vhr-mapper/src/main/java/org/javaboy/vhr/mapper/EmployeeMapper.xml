@@ -139,7 +139,7 @@
         </if>
     </select>
     <select id="getTotal" resultType="java.lang.Long">
-        select count(*) from employee e
+            select count(*) from employee e
         <where>
             <if test="emp!=null">
                 <if test="emp.name !=null and emp.name!=''">

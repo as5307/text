@@ -30,6 +30,7 @@ public class MenuService {
     MenuMapper menuMapper;
     @Autowired
     MenuRoleMapper menuRoleMapper;
+
     public List<Menu> getMenusByHrId() {
         return menuMapper.getMenusByHrId(((Hr) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getId());
     }
@@ -42,7 +43,6 @@ public class MenuService {
     public List<Menu> getAllMenus() {
         return menuMapper.getAllMenus();
     }
-
     public List<Integer> getMidsByRid(Integer rid) {
         return menuMapper.getMidsByRid(rid);
     }

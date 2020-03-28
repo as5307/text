@@ -67,9 +67,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.addFilterBefore(verificationCodeFilter, UsernamePasswordAuthenticationFilter.class);
+  /*      http.addFilterBefore(verificationCodeFilter, UsernamePasswordAuthenticationFilter.class);*/
         http.authorizeRequests()
-//                .anyRequest().authenticated()
                 .withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {
                     @Override
                     public <O extends FilterSecurityInterceptor> O postProcess(O object) {

@@ -11,9 +11,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @MapperScan(basePackages = "org.javaboy.vhr.mapper")
 @EnableScheduling
 public class VhrApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(VhrApplication.class, args);
     }
-
 }
